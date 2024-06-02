@@ -44,7 +44,7 @@ function findLargestElement(arr) {
   return max;
 }
 
-console.log(findLargestElement(arr), "FAST COMPARE AND SAVE");
+console.log(findLargestElement(arr), "FIRST COMPARE AND SAVE");
 
 //Big O(n)
 
