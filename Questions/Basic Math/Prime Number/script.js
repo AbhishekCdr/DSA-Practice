@@ -38,6 +38,21 @@ function checkPrimeFast(num) {
   return cnt === 2;
 }
 
-console.log(checkPrimeFast(5));
+// console.log(checkPrimeFast(5));
 
 //Big O(sqrt(n))
+
+let obj = {
+  username: "sharon",
+  age: 27,
+  printAge: function () {
+    console.log("this inside function:", this);
+    return function () {
+      console.log("this:", this);
+      console.log("My username is:", this.username);
+    };
+  },
+};
+const func = obj.printAge();
+let newObj = { username: "shashi", age: 26 };
+func.call(newObj);

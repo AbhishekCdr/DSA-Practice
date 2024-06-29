@@ -55,4 +55,24 @@ function recursiveBinarySearch(n, arr) {
 }
 
 //finding the value and return true if found and flase if not
-console.log(recursiveBinarySearch(3, arr));
+// console.log(recursiveBinarySearch(3, arr));
+
+function recursiveBinary(arr, val, start, end) {
+  if (start > end) {
+    return -1;
+  }
+
+  let middle = Math.floor((start + end) / 2);
+
+  if (arr[middle] === val) {
+    return middle;
+  }
+
+  if (arr[middle] > val) {
+    return recursiveBinary(arr, val, start, middle - 1);
+  } else {
+    return recursiveBinary(arr, val, middle + 1, end);
+  }
+}
+
+console.log(recursiveBinary(arr, 8, 0, 8));
